@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2b</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+        <header id="main-header">
+            <div class="container">
+                <a href="/" style="text-decoration:none"><h1 style="color:white;">ELIDEK PROJECT FUNDS</h1></a>
+            </div>
+        </header>
+    <div>
+        <div class="fchild">
+            <h4>Organizations:</h4>
+            {% for i in range(size3b) %}
+            <h3>{{data3b[i][0]}}</h3>
+            {% endfor %}
+        </div>  
+        <div class="fchild">
+            <h4>Tasks:</h4>
+            {% for i in range(size3b) %}
+            <h3>{{data3b[i][1]}}</h3>
+            {% endfor %}
+        </div>  
+    </div>
+</body>
+</html>

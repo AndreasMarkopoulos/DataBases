@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <a href="/" style="text-decoration:none"><h1 style="color:white">ELIDEK PROJECT FUNDS</h1></a>
+        </div>
+    </header>
+    <label for="executive"><h2>Select executives:</h2></label>
+    
+    <main>
+        <form action="#" method="POST">
+            <div>
+            <select name="executive"> 
+                <option value="0">No preference</option>
+                {% for i in range(sizex1) %}
+                    <option value="{{i+1}}">{{dataex[i][1]}}</option>
+                {% endfor %} 
+                
+              <!-- <option value="1">Andreas Markopoulos</option>
+                <option value="2">Andreas Moschos</option>
+                <option value="3">Giannis Parcharidis</option>
+                <option value="4">Giorgos Lyberopoulos</option>
+                <option value="5">Anna Stathouli</option>
+                <option value="6">Giorgos Atsaros</option>
+                <option value="7">Panos Mantakos</option>
+                <option value="8">Spyros Tsaparas</option>
+                <option value="9">Dimitris Zafiriou</option>
+                <option value="10">Stefanos Aliftiras</option>
+                <option value="11">Efthimis Eftaksias</option>
+                <option value="12">Akindinos Paleologos</option>
+                <option value="13">Nikos Mavrikis</option>
+                <option value="14">Ahmet Maria-Aggeliki</option>
+                <option value="15">Konstantinos Demirtzis</option>  --> 
+            </select>
+            </div>
+            <div>
+            <label for="active_on"><h2>Active on day:</h2></label>
+
+            <input type="date" name="active_on" >
+            </div>
+            <div>
+            <label for="duration"><h2>Set duration limit (in months):</h2></label>  
+            <input type="text" name="duration">
+            <div>
+            <input type="submit" value="Show results">
+            
+        </form>
+        <div>
+            <div class="fchild">
+            <h4>Tasks:</h4>
+                {% for i in range(size1) %}
+                    <h3>{{data1[i][0]}}</h3>
+                {% endfor %}
+            </div>   
+            <div class="fchild">
+                <h4>Researchers:</h4>
+                {% for i in range(size1) %}
+                    <h3>{{data1[i][2]}} {{data1[i][1]}}</h3>
+                {% endfor %}    
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>

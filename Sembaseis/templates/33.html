@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+    <title>Q3</title>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <a href="/" style="text-decoration:none"><h1 style="color:white;">ELIDEK PROJECT FUNDS</h1></a>
+        </div>
+    </header>
+    <div>
+    <label for="sfieldselection"><h2>Select scientific field:</h2></label>
+    <form action="#" method="POST">
+        
+        <div class="box">
+            <select name="sfield">
+                {% for i in range(sizef3) %}
+                    <option value="{{i+1}}">{{datasfield[i][1]}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        </br>
+        <button class="button-16" value="Show results">SUBMIT</button>
+
+    </form> 
+    
+    </div>
+    <hr/>
+    
+        <div class="fchild">
+            <h4>Researchers:</h4>
+                {% for i in range(size3a) %}
+                    <h3>{{data3a[i][1]}} {{data3a[i][0]}} </h3>
+                {% endfor %}
+        </div>
+        <div class="fchild">
+            <h4>Tasks:</h4>
+            {% for i in range(size3b) %}
+                <h3>{{data3b[i][0]}}</h3>
+            {% endfor %}
+        </div>
+  
+</body>
+</html>

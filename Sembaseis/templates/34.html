@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <a href="/" style="text-decoration:none" ><h1 style="color:white;">ELIDEK PROJECT FUNDS</h1></a>
+        </div>
+    </header>
+    <form action="#" method="POST">
+        <label for="year1"><h2>Set first year:</h2></label>  
+        <input type="text" name="year1">
+        <input type="submit" value="Show results">
+    </form>
+    <div>
+        <h4>Organizations:</h4>
+        {% for i in range(size4) %}
+            <h3>{{data4[i][0]}}</h3>
+        {% endfor %}
+    </div>
+</body>
+</html>
